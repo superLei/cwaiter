@@ -1,0 +1,120 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>pos</groupId>
+	<artifactId>cwaiter</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>cwaiter</name>
+	<url>http://maven.apache.org</url>
+	<!--<repositories>-->
+		<!--<repository>-->
+			<!--<id>public</id>-->
+			<!--<name>Public Repositories</name>-->
+			<!--<url>http://192.168.1.40:8081/nexus/content/groups/public/</url>-->
+			<!--<releases>-->
+				<!--<enabled>true</enabled>-->
+			<!--</releases>-->
+			<!--<snapshots>-->
+				<!--<enabled>true</enabled>-->
+			<!--</snapshots>-->
+		<!--</repository>-->
+	<!--</repositories>-->
+	<!---->
+	<!--<pluginRepositories>-->
+	<!--<pluginRepository>-->
+		<!--<id>public</id>-->
+		<!--<name>Public Repositories</name>-->
+		<!--<url>http://192.168.1.40:8081/nexus/content/groups/public/</url>-->
+		<!--<releases>-->
+			<!--<enabled>true</enabled>-->
+		<!--</releases>-->
+		<!--<snapshots>-->
+			<!--<enabled>true</enabled>-->
+		<!--</snapshots>-->
+	<!--</pluginRepository>-->
+<!--</pluginRepositories>  -->
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+	<dependency>
+		<groupId>org.seleniumhq.selenium</groupId>
+		<artifactId>selenium-java</artifactId>
+		<version>2.53.1</version>
+	</dependency>
+
+	<dependency>
+		<groupId>org.testng</groupId>
+		<artifactId>testng</artifactId>
+		<version>6.9.10</version>
+	</dependency>
+
+	<!-- Log4j API -->
+	<dependency>
+		<groupId>org.apache.logging.log4j</groupId>
+		<artifactId>log4j-api</artifactId>
+		<version>2.7</version>
+	</dependency>
+	<!-- Core Log4j -->
+	<dependency>
+		<groupId>org.apache.logging.log4j</groupId>
+		<artifactId>log4j-core</artifactId>
+		<version>2.7</version>
+	</dependency>
+
+</dependencies>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.9</version>
+					<configuration>
+						<suiteXmlFiles>
+							<suiteXmlFile>testng.xml</suiteXmlFile>
+						</suiteXmlFiles>
+					</configuration>
+					<executions>
+						<execution>
+							<id>default-test</id>
+							<phase>test</phase>
+							<goals>
+								<goal>test</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>2.6</version>
+					<executions>
+						<execution>
+							<id>copy-xmls</id>
+							<phase>process-sources</phase>
+							<goals>
+								<goal>copy-resources</goal>
+							</goals>
+							<configuration>
+								<outputDirectory>${basedir}/target/classes</outputDirectory>
+								<resources>
+									<resource>
+										<directory>${basedir}/src/main/java</directory>
+										<includes>
+											<include>**/*.xml</include>
+										</includes>
+									</resource>
+								</resources>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>

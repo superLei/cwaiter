@@ -1,0 +1,229 @@
+2017.03.27 at 18:04:45 CST INFO  utils.ShopChrome 64 open - open url: http://192.168.1.79
+2017.03.27 at 18:04:46 CST INFO  utils.ShopChrome 254 type -     logIn_User  =  root
+2017.03.27 at 18:04:46 CST INFO  utils.ShopChrome 254 type -     logIn_Pwd  =  123456
+2017.03.27 at 18:04:46 CST INFO  utils.ShopChrome 175 click -     logIn_Submit
+2017.03.27 at 18:04:50 CST INFO  page.Login 22 logIn - login successfully!
+2017.03.27 at 18:04:50 CST INFO  testcase.Test1 34 dPreCheck - ***************点菜->下单->订单预结->微生活会员卡-> 微生活会员卡号*******************
+2017.03.27 at 18:04:56 CST INFO  page.OrderManage 155 selectDesks - ******进入当前客人管理******
+2017.03.27 at 18:04:56 CST INFO  utils.ShopChrome 304 changeFrame -     orderMagFrame
+2017.03.27 at 18:04:56 CST INFO  utils.ShopChrome 175 click -     nv_OrderManager_CurPeo
+2017.03.27 at 18:05:01 CST INFO  page.OrderManage 164 selectDesks - ******点菜下单并确认********
+2017.03.27 at 18:05:01 CST DEBUG utils.ShopChrome 144 switchToDefaultFrame - 切换到默认的Frame
+2017.03.27 at 18:05:01 CST INFO  utils.ShopChrome 304 changeFrame -     deskStatusFrame
+2017.03.27 at 18:05:01 CST INFO  utils.ShopChrome 677 selectDesk - 桌台序号：3
+2017.03.27 at 18:05:01 CST DEBUG utils.ShopChrome 679 selectDesk - The desk's count is 119
+2017.03.27 at 18:05:03 CST INFO  utils.ShopChrome 254 type -     desktop_People  =  3
+2017.03.27 at 18:05:04 CST INFO  utils.ShopChrome 175 click -     desktop_Submit
+2017.03.27 at 18:05:05 CST INFO  utils.ShopChrome 175 click -     desktop_ChooseDish_Single
+2017.03.27 at 18:05:08 CST INFO  utils.ShopChrome 175 click -     desktop_ChooseDish_Submit
+2017.03.27 at 18:05:10 CST INFO  page.OrderManage 324 submitDish - *******确定下单*******
+2017.03.27 at 18:05:10 CST INFO  utils.ShopChrome 175 click -     chooseDish_RepeatDish_Submit
+2017.03.27 at 18:05:13 CST INFO  page.OrderManage 389 prePay - <--------------预结--------------->
+2017.03.27 at 18:05:13 CST INFO  utils.ShopChrome 175 click -     desktop_Order_Right_PreCheck
+2017.03.27 at 18:05:15 CST INFO  utils.ShopChrome 527 clickByIndex - WebElement: //a[@name='prechecktype']/span
+2017.03.27 at 18:05:15 CST INFO  utils.ShopChrome 254 type -     prePay_Cardcode  =  17090403700
+2017.03.27 at 18:05:16 CST INFO  utils.ShopChrome 527 clickByIndex - WebElement: //form/div/div[@class='x-form-radiogroup']
+2017.03.27 at 18:05:41 CST ERROR utils.ShopChrome 486 getEle - Cannot get WebElment
+org.openqa.selenium.WebDriverException: disconnected: received Inspector.detached event
+  (Session info: chrome=55.0.2883.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 5.11 seconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'sl-PC', ip: '169.254.212.157', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_79'
+*** Element info: {Using=xpath, value=//form/div/div[@class='x-form-radiogroup']}
+Session ID: 43a33df84430d903a47a21d278686bd2
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\sl\AppData\Local\Temp\scoped_dir70464_12459, chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9)}, networkConnectionEnabled=false, unexpectedAlertBehaviour=, rotatable=false, locationContextEnabled=true, mobileEmulationEnabled=false, version=55.0.2883.87, pageLoadStrategy=normal, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, hasTouchScreen=false, applicationCacheEnabled=false, takesScreenshot=true}]
+2017.03.27 at 18:05:41 CST ERROR utils.ShopChrome 454 waitForElementVisible - we cannot locat the element in specified seconds! 
+java.lang.NullPointerException
+2017.03.27 at 18:05:41 CST INFO  utils.ShopChrome 527 clickByIndex - WebElement: //a[@name='servicecharges']/span
+2017.03.27 at 18:05:41 CST DEBUG utils.ShopChrome 529 clickByIndex - index is null!
+2017.03.27 at 18:05:41 CST DEBUG utils.ShopChrome 249 type - element shouldn't be null!
+2017.03.27 at 18:05:41 CST DEBUG utils.ShopChrome 422 select - element shouldn't be null!
+2017.03.27 at 18:05:41 CST INFO  utils.ShopChrome 527 clickByIndex - WebElement: //a[@name='invoice']/span
+2017.03.27 at 18:05:41 CST DEBUG utils.ShopChrome 529 clickByIndex - index is null!
+2017.03.27 at 18:05:41 CST DEBUG utils.ShopChrome 249 type - element shouldn't be null!
+2017.03.27 at 18:05:41 CST INFO  page.OrderManage 368 prePay_Ok - ------预结并确认
+2017.03.27 at 18:05:41 CST INFO  utils.ShopChrome 175 click -     desktop_Submit
+2017.03.27 at 18:05:45 CST INFO  utils.ShopChrome 175 click -     chooseDish_RepeatDish_Submit
+2017.03.27 at 18:05:51 CST INFO  utils.ShopChrome 175 click -     desktop_ChooseDish_Bill
+2017.03.27 at 18:05:59 CST ERROR utils.ShopChrome 185 click - //button[.='订单结账(14)']not find!!
+org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
+  (Session info: chrome=55.0.2883.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 6.27 seconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'sl-PC', ip: '169.254.212.157', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_79'
+*** Element info: {Using=xpath, value=//button[.='订单结账(14)']}
+Session ID: 43a33df84430d903a47a21d278686bd2
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\sl\AppData\Local\Temp\scoped_dir70464_12459, chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9)}, networkConnectionEnabled=false, unexpectedAlertBehaviour=, rotatable=false, locationContextEnabled=true, mobileEmulationEnabled=false, version=55.0.2883.87, pageLoadStrategy=normal, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, hasTouchScreen=false, applicationCacheEnabled=false, takesScreenshot=true}]
+2017.03.27 at 18:13:53 CST INFO  utils.ShopChrome 64 open - open url: http://192.168.1.79
+2017.03.27 at 18:13:54 CST INFO  utils.ShopChrome 254 type -     logIn_User  =  root
+2017.03.27 at 18:13:54 CST INFO  utils.ShopChrome 254 type -     logIn_Pwd  =  123456
+2017.03.27 at 18:13:55 CST INFO  utils.ShopChrome 175 click -     logIn_Submit
+2017.03.27 at 18:13:59 CST INFO  page.Login 22 logIn - login successfully!
+2017.03.27 at 18:13:59 CST INFO  testcase.Test1 34 dPreCheck - ***************点菜->下单->订单预结->微生活会员卡-> 微生活会员卡号*******************
+2017.03.27 at 18:14:05 CST INFO  page.OrderManage 155 selectDesks - ******进入当前客人管理******
+2017.03.27 at 18:14:05 CST INFO  utils.ShopChrome 304 changeFrame -     orderMagFrame
+2017.03.27 at 18:14:05 CST INFO  utils.ShopChrome 175 click -     nv_OrderManager_CurPeo
+2017.03.27 at 18:14:12 CST INFO  page.OrderManage 164 selectDesks - ******点菜下单并确认********
+2017.03.27 at 18:14:12 CST DEBUG utils.ShopChrome 144 switchToDefaultFrame - 切换到默认的Frame
+2017.03.27 at 18:14:12 CST INFO  utils.ShopChrome 304 changeFrame -     deskStatusFrame
+2017.03.27 at 18:14:12 CST INFO  utils.ShopChrome 677 selectDesk - 桌台序号：3
+2017.03.27 at 18:14:12 CST DEBUG utils.ShopChrome 679 selectDesk - The desk's count is 119
+2017.03.27 at 18:14:14 CST INFO  utils.ShopChrome 254 type -     desktop_People  =  3
+2017.03.27 at 18:14:14 CST INFO  utils.ShopChrome 175 click -     desktop_Submit
+2017.03.27 at 18:14:16 CST INFO  utils.ShopChrome 175 click -     desktop_ChooseDish_Single
+2017.03.27 at 18:14:19 CST INFO  utils.ShopChrome 175 click -     desktop_ChooseDish_Submit
+2017.03.27 at 18:14:20 CST INFO  page.OrderManage 324 submitDish - *******确定下单*******
+2017.03.27 at 18:14:20 CST INFO  utils.ShopChrome 175 click -     chooseDish_RepeatDish_Submit
+2017.03.27 at 18:14:24 CST INFO  page.OrderManage 389 prePay - <--------------预结--------------->
+2017.03.27 at 18:14:24 CST INFO  utils.ShopChrome 175 click -     desktop_Order_Right_PreCheck
+2017.03.27 at 18:14:25 CST INFO  utils.ShopChrome 527 clickByIndex - WebElement: //a[@name='prechecktype']/span
+2017.03.27 at 18:14:26 CST INFO  utils.ShopChrome 254 type -     prePay_Cardcode  =  17090403700
+2017.03.27 at 18:14:26 CST INFO  utils.ShopChrome 527 clickByIndex - WebElement: //form/div/div[@class='x-form-radiogroup']
+2017.03.27 at 18:15:06 CST ERROR utils.ShopChrome 486 getEle - Cannot get WebElment
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+2017.03.27 at 18:15:06 CST ERROR utils.ShopChrome 454 waitForElementVisible - we cannot locat the element in specified seconds! 
+java.lang.NullPointerException
+2017.03.27 at 18:15:06 CST INFO  utils.ShopChrome 527 clickByIndex - WebElement: //a[@name='servicecharges']/span
+2017.03.27 at 18:15:06 CST DEBUG utils.ShopChrome 529 clickByIndex - index is null!
+2017.03.27 at 18:15:06 CST DEBUG utils.ShopChrome 422 select - element shouldn't be null!
+2017.03.27 at 18:15:06 CST INFO  utils.ShopChrome 527 clickByIndex - WebElement: //a[@name='invoice']/span
+2017.03.27 at 18:15:06 CST DEBUG utils.ShopChrome 529 clickByIndex - index is null!
+2017.03.27 at 18:15:06 CST DEBUG utils.ShopChrome 249 type - element shouldn't be null!
+2017.03.27 at 18:15:06 CST INFO  page.OrderManage 368 prePay_Ok - ------预结并确认
+2017.03.27 at 18:15:06 CST INFO  utils.ShopChrome 175 click -     desktop_Submit
+2017.03.27 at 18:15:08 CST INFO  utils.ShopChrome 175 click -     chooseDish_RepeatDish_Submit
+2017.03.27 at 18:15:13 CST INFO  utils.ShopChrome 175 click -     desktop_ChooseDish_Bill
+2017.03.27 at 18:15:35 CST ERROR utils.ShopChrome 185 click - //button[.='订单结账(14)']not find!!
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[.='订单结账(14)']"}
+  (Session info: chrome=55.0.2883.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'sl-PC', ip: '169.254.212.157', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_79'
+*** Element info: {Using=xpath, value=//button[.='订单结账(14)']}
+Session ID: 6ae8d34241e142253cfd50ec74f682db
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\sl\AppData\Local\Temp\scoped_dir72568_23614, chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9)}, networkConnectionEnabled=false, unexpectedAlertBehaviour=, rotatable=false, locationContextEnabled=true, mobileEmulationEnabled=false, version=55.0.2883.87, pageLoadStrategy=normal, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, hasTouchScreen=false, applicationCacheEnabled=false, takesScreenshot=true}]
+2017.03.27 at 18:16:12 CST INFO  utils.ShopChrome 64 open - open url: http://192.168.1.79
+2017.03.27 at 18:16:12 CST INFO  utils.ShopChrome 254 type -     logIn_User  =  root
+2017.03.27 at 18:16:13 CST INFO  utils.ShopChrome 254 type -     logIn_Pwd  =  123456
+2017.03.27 at 18:16:13 CST INFO  utils.ShopChrome 175 click -     logIn_Submit
+2017.03.27 at 18:16:16 CST INFO  page.Login 22 logIn - login successfully!
+2017.03.27 at 18:16:16 CST INFO  testcase.Test1 34 dPreCheck - ***************点菜->下单->订单预结->微生活会员卡-> 微生活会员卡号*******************
+2017.03.27 at 18:16:22 CST INFO  page.OrderManage 155 selectDesks - ******进入当前客人管理******
+2017.03.27 at 18:16:22 CST INFO  utils.ShopChrome 304 changeFrame -     orderMagFrame
+2017.03.27 at 18:16:22 CST INFO  utils.ShopChrome 175 click -     nv_OrderManager_CurPeo
+2017.03.27 at 18:16:28 CST INFO  page.OrderManage 164 selectDesks - ******点菜下单并确认********
+2017.03.27 at 18:16:28 CST DEBUG utils.ShopChrome 144 switchToDefaultFrame - 切换到默认的Frame
+2017.03.27 at 18:16:28 CST INFO  utils.ShopChrome 304 changeFrame -     deskStatusFrame
+2017.03.27 at 18:16:28 CST INFO  utils.ShopChrome 677 selectDesk - 桌台序号：3
+2017.03.27 at 18:16:28 CST DEBUG utils.ShopChrome 679 selectDesk - The desk's count is 119
+2017.03.27 at 18:16:31 CST INFO  utils.ShopChrome 254 type -     desktop_People  =  3
+2017.03.27 at 18:16:31 CST INFO  utils.ShopChrome 175 click -     desktop_Submit
+2017.03.27 at 18:16:32 CST INFO  utils.ShopChrome 175 click -     desktop_ChooseDish_Single
+2017.03.27 at 18:16:35 CST INFO  utils.ShopChrome 175 click -     desktop_ChooseDish_Submit
+2017.03.27 at 18:16:37 CST INFO  page.OrderManage 324 submitDish - *******确定下单*******
+2017.03.27 at 18:16:37 CST INFO  utils.ShopChrome 175 click -     chooseDish_RepeatDish_Submit
+2017.03.27 at 18:16:40 CST INFO  utils.ShopChrome 175 click -     desktop_Order_Right_PreCheck
+2017.03.27 at 18:16:42 CST INFO  utils.ShopChrome 527 clickByIndex - WebElement: //a[@name='prechecktype']/span
+2017.03.27 at 18:16:42 CST INFO  utils.ShopChrome 254 type -     prePay_Cardcode  =  17090403700
+2017.03.27 at 18:16:43 CST INFO  page.OrderManage 368 prePay_Ok - ------预结并确认
+2017.03.27 at 18:16:43 CST INFO  utils.ShopChrome 175 click -     desktop_Submit
+2017.03.27 at 18:16:44 CST INFO  utils.ShopChrome 175 click -     chooseDish_RepeatDish_Submit
+2017.03.27 at 18:16:50 CST INFO  utils.ShopChrome 175 click -     desktop_ChooseDish_Bill
+2017.03.27 at 18:17:11 CST ERROR utils.ShopChrome 185 click - //button[.='订单结账(14)']not find!!
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[.='订单结账(14)']"}
+  (Session info: chrome=55.0.2883.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'sl-PC', ip: '169.254.212.157', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_79'
+*** Element info: {Using=xpath, value=//button[.='订单结账(14)']}
+Session ID: 89d18a9daff5dec27f85d3cc0da81aaa
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\sl\AppData\Local\Temp\scoped_dir62624_2483, chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9)}, networkConnectionEnabled=false, unexpectedAlertBehaviour=, rotatable=false, locationContextEnabled=true, mobileEmulationEnabled=false, version=55.0.2883.87, pageLoadStrategy=normal, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, hasTouchScreen=false, applicationCacheEnabled=false, takesScreenshot=true}]
+2017.03.27 at 18:19:03 CST INFO  utils.ShopChrome 64 open - open url: http://192.168.1.79
+2017.03.27 at 18:19:05 CST INFO  utils.ShopChrome 255 type -     logIn_User  =  root
+2017.03.27 at 18:19:05 CST INFO  utils.ShopChrome 255 type -     logIn_Pwd  =  123456
+2017.03.27 at 18:19:05 CST INFO  utils.ShopChrome 175 click -     logIn_Submit
+2017.03.27 at 18:19:10 CST INFO  page.Login 22 logIn - login successfully!
+2017.03.27 at 18:19:10 CST INFO  testcase.Test1 34 dPreCheck - ***************点菜->下单->订单预结->微生活会员卡-> 微生活会员卡号*******************
+2017.03.27 at 18:19:16 CST INFO  page.OrderManage 155 selectDesks - ******进入当前客人管理******
+2017.03.27 at 18:19:16 CST INFO  utils.ShopChrome 305 changeFrame -     orderMagFrame
+2017.03.27 at 18:19:16 CST INFO  utils.ShopChrome 175 click -     nv_OrderManager_CurPeo
+2017.03.27 at 18:19:23 CST INFO  page.OrderManage 164 selectDesks - ******点菜下单并确认********
+2017.03.27 at 18:19:23 CST DEBUG utils.ShopChrome 144 switchToDefaultFrame - 切换到默认的Frame
+2017.03.27 at 18:19:23 CST INFO  utils.ShopChrome 305 changeFrame -     deskStatusFrame
+2017.03.27 at 18:19:23 CST INFO  utils.ShopChrome 678 selectDesk - 桌台序号：3
+2017.03.27 at 18:19:23 CST DEBUG utils.ShopChrome 680 selectDesk - The desk's count is 119
+2017.03.27 at 18:19:25 CST INFO  utils.ShopChrome 255 type -     desktop_People  =  3
+2017.03.27 at 18:19:25 CST INFO  utils.ShopChrome 175 click -     desktop_Submit
+2017.03.27 at 18:19:26 CST INFO  utils.ShopChrome 175 click -     desktop_ChooseDish_Single
+2017.03.27 at 18:19:29 CST INFO  utils.ShopChrome 175 click -     desktop_ChooseDish_Submit
+2017.03.27 at 18:19:31 CST INFO  page.OrderManage 324 submitDish - *******确定下单*******
+2017.03.27 at 18:19:31 CST INFO  utils.ShopChrome 175 click -     chooseDish_RepeatDish_Submit
+2017.03.27 at 18:19:34 CST INFO  utils.ShopChrome 175 click -     desktop_Order_Right_PreCheck
+2017.03.27 at 18:19:36 CST INFO  utils.ShopChrome 528 clickByIndex - WebElement: //a[@name='prechecktype']/span
+2017.03.27 at 18:19:37 CST INFO  utils.ShopChrome 255 type -     prePay_Cardcode  =  17090403700
+2017.03.27 at 18:19:37 CST INFO  page.OrderManage 368 prePay_Ok - ------预结并确认
+2017.03.27 at 18:19:37 CST INFO  utils.ShopChrome 175 click -     desktop_Submit
+2017.03.27 at 18:19:38 CST INFO  utils.ShopChrome 175 click -     chooseDish_RepeatDish_Submit
+2017.03.27 at 18:19:44 CST INFO  utils.ShopChrome 175 click -     desktop_ChooseDish_Bill
+2017.03.27 at 18:20:05 CST ERROR utils.ShopChrome 185 click - //button[.='订单结账(14)']not find!!
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[.='订单结账(14)']"}
+  (Session info: chrome=55.0.2883.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'sl-PC', ip: '169.254.212.157', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_79'
+*** Element info: {Using=xpath, value=//button[.='订单结账(14)']}
+Session ID: fdf64968b878ebc1961919627cdf4988
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\sl\AppData\Local\Temp\scoped_dir72316_2938, chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9)}, networkConnectionEnabled=false, unexpectedAlertBehaviour=, rotatable=false, locationContextEnabled=true, mobileEmulationEnabled=false, version=55.0.2883.87, pageLoadStrategy=normal, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, hasTouchScreen=false, applicationCacheEnabled=false, takesScreenshot=true}]
+2017.03.27 at 18:20:58 CST INFO  utils.ShopChrome 64 open - open url: http://192.168.1.79
+2017.03.27 at 18:20:59 CST INFO  utils.ShopChrome 255 type -     logIn_User  =  root
+2017.03.27 at 18:20:59 CST INFO  utils.ShopChrome 255 type -     logIn_Pwd  =  123456
+2017.03.27 at 18:20:59 CST INFO  utils.ShopChrome 175 click -     logIn_Submit
+2017.03.27 at 18:21:03 CST INFO  page.Login 22 logIn - login successfully!
+2017.03.27 at 18:21:03 CST INFO  testcase.Test1 34 dPreCheck - ***************点菜->下单->订单预结->微生活会员卡-> 微生活会员卡号*******************
+2017.03.27 at 18:21:09 CST INFO  page.OrderManage 155 selectDesks - ******进入当前客人管理******
+2017.03.27 at 18:21:09 CST INFO  utils.ShopChrome 305 changeFrame -     orderMagFrame
+2017.03.27 at 18:21:09 CST INFO  utils.ShopChrome 175 click -     nv_OrderManager_CurPeo
+2017.03.27 at 18:21:15 CST INFO  page.OrderManage 164 selectDesks - ******点菜下单并确认********
+2017.03.27 at 18:21:15 CST DEBUG utils.ShopChrome 144 switchToDefaultFrame - 切换到默认的Frame
+2017.03.27 at 18:21:15 CST INFO  utils.ShopChrome 305 changeFrame -     deskStatusFrame
+2017.03.27 at 18:21:15 CST INFO  utils.ShopChrome 678 selectDesk - 桌台序号：3
+2017.03.27 at 18:21:15 CST DEBUG utils.ShopChrome 680 selectDesk - The desk's count is 119
+2017.03.27 at 18:21:18 CST INFO  utils.ShopChrome 255 type -     desktop_People  =  3
+2017.03.27 at 18:21:18 CST INFO  utils.ShopChrome 175 click -     desktop_Submit
+2017.03.27 at 18:21:19 CST INFO  utils.ShopChrome 175 click -     desktop_ChooseDish_Single
+2017.03.27 at 18:21:22 CST INFO  utils.ShopChrome 175 click -     desktop_ChooseDish_Submit
+2017.03.27 at 18:21:24 CST INFO  page.OrderManage 324 submitDish - *******确定下单*******
+2017.03.27 at 18:21:24 CST INFO  utils.ShopChrome 175 click -     chooseDish_RepeatDish_Submit
+2017.03.27 at 18:21:27 CST INFO  utils.ShopChrome 175 click -     desktop_Order_Right_PreCheck
+2017.03.27 at 18:21:29 CST INFO  utils.ShopChrome 528 clickByIndex - WebElement: //a[@name='prechecktype']/span
+2017.03.27 at 18:21:29 CST INFO  utils.ShopChrome 255 type -     prePay_Cardcode  =  17090403700
+2017.03.27 at 18:21:30 CST INFO  utils.ShopChrome 255 type -     prePay_Cardcode  =  17090403700
+2017.03.27 at 18:21:30 CST INFO  page.OrderManage 368 prePay_Ok - ------预结并确认
+2017.03.27 at 18:21:30 CST INFO  utils.ShopChrome 175 click -     desktop_Submit
+2017.03.27 at 18:21:31 CST INFO  utils.ShopChrome 175 click -     chooseDish_RepeatDish_Submit
+2017.03.27 at 18:21:37 CST INFO  utils.ShopChrome 175 click -     desktop_ChooseDish_Bill
+2017.03.27 at 18:21:58 CST ERROR utils.ShopChrome 185 click - //button[.='订单结账(14)']not find!!
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[.='订单结账(14)']"}
+  (Session info: chrome=55.0.2883.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'sl-PC', ip: '169.254.212.157', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_79'
+*** Element info: {Using=xpath, value=//button[.='订单结账(14)']}
+Session ID: 9744f3c45adce947d9c48326c3110d06
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\sl\AppData\Local\Temp\scoped_dir73292_9185, chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9)}, networkConnectionEnabled=false, unexpectedAlertBehaviour=, rotatable=false, locationContextEnabled=true, mobileEmulationEnabled=false, version=55.0.2883.87, pageLoadStrategy=normal, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, hasTouchScreen=false, applicationCacheEnabled=false, takesScreenshot=true}]

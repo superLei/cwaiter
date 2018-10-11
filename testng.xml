@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="classes">
+	<test name="LogIn">
+		<classes>
+			<class name="testcase.LogIn" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="OrderDish">
+		<classes>
+			<class name="testcase.OrderDish" />
+		</classes>
+	</test>
+	<test name="GiftDish">
+		<classes>
+			<class name="testcase.GiftDish" />
+		</classes>
+	</test>
+
+	<test name="AddDish">
+		<classes>
+			<class name="testcase.AddDish" />
+		</classes>
+	</test>
+	<test name="RetreatDish">
+		<classes>
+			<class name="testcase.RetreatDish" />
+		</classes>
+	</test>
+
+	<test name="SingleRealIncome">
+		<classes>
+			<class name="testcase.SingleRealIncome" />
+		</classes>
+	</test>
+	<test name="TurnDish">
+		<classes>
+			<class name="testcase.TurnDish" />
+		</classes>
+	</test>
+	<test name="TureOrder">
+		<classes>
+			<class name="testcase.TureOrder" />
+		</classes>
+	</test>
+	<test name="PreCheck">
+		<classes>
+			<class name="testcase.PreCheck" />
+		</classes>
+	</test>
+	<test name="CheckOut">
+		<classes>
+			<class name="testcase.CheckOut" />
+		</classes>
+	</test>
+</suite> <!-- Suite -->
