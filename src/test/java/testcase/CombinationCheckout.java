@@ -47,11 +47,11 @@ public class CombinationCheckout {
         chrome.click(Shop.loginBtn);
 
 //        chrome.waitForElementClick(Shop.loginBtn, 10);
-//        String srcUrl = chrome.getElement(Shop.dynamicCode).getAttribute("src");
-//        System.out.println(srcUrl);
-//        String code = doOCR.seeOCR(srcUrl);
-//        System.out.println("code is: " + code);
-//        new Login().logIn(Shop.groupID,Shop.userName,Shop.passWord,code);
+        String srcUrl = chrome.getElement(Shop.dynamicCode).getAttribute("src");
+        System.out.println(srcUrl);
+        String code = doOCR.seeOCR(srcUrl);
+        System.out.println("code is: " + code);
+        new Login().logIn(Shop.groupID,Shop.userName,Shop.passWord,code);
 
 
 

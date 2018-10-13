@@ -82,7 +82,7 @@ public class ShopChrome {
 		options.setBinary(path);
 		dr = new ChromeDriver(options);
 		dr.manage().window().maximize();
-		dr.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//		dr.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}
 	/**
 	 *  勾选checkBox
@@ -163,7 +163,6 @@ public class ShopChrome {
 
 	/**
 	 * 点击页面上的元素
-	 * @param xpath元素
 	 * */
 	public void click(String elementName) { 
 		if(elementName == null) {
@@ -174,7 +173,6 @@ public class ShopChrome {
 			try {
 				if(f.get(methods).equals(elementName)) {log.info("    " + f.getName());break;}
 			} catch (IllegalArgumentException | IllegalAccessException e) {
-				// TODO Auto-generated catch block
 				log.error("不能找到元素对应的变量"+e);
 			}	
 		}
@@ -225,8 +223,7 @@ public class ShopChrome {
 	
 	/** 
 	  * 判断元素在指定时间是否可以点击
-	  * @param by 元素 
-	  * @param seconds 指定秒数 
+	  * @param seconds 指定秒数
 	  * @return 出现返回true 否则返回false 
 	  */  
 	 public boolean waitForElementClick(String element, int seconds) {  
@@ -263,7 +260,7 @@ public class ShopChrome {
 	
 	/**
 	 * 清除输入框里面的内容
-	 * @param xpath元素
+	 * @param elementName
 	 * */
 	public void clearText(String[] elementName) {
 		for (String str : elementName) {
@@ -297,7 +294,7 @@ public class ShopChrome {
 	
 	/**
 	 *  根据xpath元素改变页面Frame
-	 *  @param xpath元素
+	 *  @param elementName
 	 * */
 	public void changeFrame(String elementName) {
 		try {
@@ -341,7 +338,6 @@ public class ShopChrome {
 	
 	/**
 	 * 获取xpath的元素对象
-	 * @param xpath元素
 	 * */
 	public WebElement getElement(String eleName) throws Exception {
 		return dr.findElementByXPath(eleName);
@@ -353,19 +349,7 @@ public class ShopChrome {
 	public String getWindowHandle() {
 		return dr.getWindowHandle();
 	}
-	
-	/**
-	 * 切换到默认的Frame
-	 */
-	public void DefaultFrame() {
-		try {
-			log.debug("切换到默认的Frame");
-			dr.switchTo().defaultContent();
-		} catch (Exception e) {
-			log.error(e);
-			e.printStackTrace();
-		}
-	}
+
 	/**
 	 * 转到对应的页面
 	 * */
@@ -473,8 +457,6 @@ public class ShopChrome {
 	
 	/**
 	 *  获取指定行的元素对象
-	 *  @param Xpath
-	 *  @param 行序号
 	 *  @return 元素对象
 	 * */ 
 	 public WebElement getEle(String trXpath,int rowIdx) {
@@ -494,7 +476,7 @@ public class ShopChrome {
 	 /**
 	  * 点击指定文本的元素
 	  * @param xPath
-	  * @param 元素文本
+	  * @param eleText
 	  * @return 执行次数
 	  * */
 	public void clickByText(String xPath, String eleText) {
@@ -866,7 +848,6 @@ public class ShopChrome {
 	
 	/**
 	 *  在退菜界面，选择退菜品项
-	 *  @param xPath 表格路径
 	 *  @param ordinal 退菜的菜品的序号，由上向下，从0开始
 	 * */
 	public void checkDish(int ordinal) {
@@ -885,7 +866,6 @@ public class ShopChrome {
 	
 	/**
 	 *  在退菜界面，选择退菜品项
-	 *  @param xPath 表格路径
 	 *  @param ordinal 退菜的菜品的序号，由上向下，从0开始
 	 *  @param count 菜品数量
 	 * */
