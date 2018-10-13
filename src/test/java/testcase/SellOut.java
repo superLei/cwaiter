@@ -26,7 +26,7 @@ public class SellOut {
 	@BeforeTest
 	public void setUp() throws Exception {
 		chrome = new ShopChrome(Shop.baseUrl);
-		new Login().logIn(Shop.userName, Shop.passWord);
+//		new Login().logIn(Shop.userName, Shop.passWord);
 	}
 	
 	@Test

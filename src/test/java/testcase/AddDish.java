@@ -39,7 +39,7 @@ public class AddDish {
 		
 		log.info("《----------------------登录--------------------------》");
 		chrome = new OrderManage(Shop.baseUrl);
-		chrome.logIn(Shop.userName, Shop.passWord);
+//		chrome.logIn(Shop.userName, Shop.passWord);
 		log.info("------进入当前客人管理------");
 		chrome.changeFrame(Shop.orderMagFrame);
 		chrome.click(Shop.nv_OrderManager_CurPeo);

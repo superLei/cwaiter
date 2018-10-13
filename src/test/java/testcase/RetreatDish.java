@@ -31,7 +31,7 @@ public class RetreatDish {
 	@BeforeTest
 	public void setUp() throws Exception {
 		chrome = new OrderManage(Shop.baseUrl);
-		new Login().logIn(Shop.userName, Shop.passWord);
+//		new Login().logIn(Shop.userName, Shop.passWord);
 	}
 	
 	@Test

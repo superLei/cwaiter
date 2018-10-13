@@ -32,7 +32,7 @@ public class PlaceOrder {
 	@BeforeTest
 	public void setUp() throws Exception {
 		chrome = new ShopChrome(Shop.baseUrl);
-		chrome.logIn(Shop.userName, Shop.passWord);
+//		chrome.logIn(Shop.userName, Shop.passWord);
 		// 当前客人管理
 		chrome.changeFrame(Shop.orderMagFrame);
 		chrome.click(Shop.nv_OrderManager_CurPeo);

@@ -14,11 +14,13 @@ public class Login extends ShopChrome{
 	public static Logger log = LogManager.getLogger(Login.class.getName());
 
 	// 实现登录功能
-	public void logIn(String user, String pwd) {
+	public void logIn(String groupID, String userName, String passWord,String code) {
 		try {
-			type(Shop.logIn_User, Shop.userName);
-			type(Shop.logIn_Pwd, Shop.passWord);
-			click(Shop.logIn_Submit);
+			type(Shop.EgroupID,groupID);
+			type(Shop.Eusername, userName);
+			type(Shop.Epassword, passWord);
+			type(Shop.Ecode, code);
+			click(Shop.Esubmit);
 			log.info("login successfully!");
 		} catch (Exception e) {
 			log.info("login failed: " + "/r/n" + e);

@@ -82,7 +82,7 @@ public class ShopChrome {
 		options.setBinary(path);
 		dr = new ChromeDriver(options);
 		dr.manage().window().maximize();
-		dr.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		dr.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	/**
 	 *  勾选checkBox
@@ -922,18 +922,6 @@ public class ShopChrome {
 			else {
 			      log.error("选择菜品价格失败!!!");
 			}
-		}
-	}
-	
-	//实现登录功能
-	public void logIn(String user,String pwd) {
-		try {
-			this.type(Shop.logIn_User, Shop.userName);
-			this.type(Shop.logIn_Pwd, Shop.passWord);
-			this.click(Shop.logIn_Submit);
-			log.info("login successfully!");
-		} catch (Exception e) {
-			log.info("login failed: " +e);
 		}
 	}
 	

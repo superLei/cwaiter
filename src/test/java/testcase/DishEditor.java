@@ -39,7 +39,7 @@ public class DishEditor {
 	@BeforeTest
 	public void setUp() throws Exception {
 		chrome = new OrderManage(Shop.baseUrl);
-		chrome.logIn(Shop.userName, Shop.passWord);
+//		chrome.logIn(Shop.userName, Shop.passWord);
 		chrome.selectDesks(deskNum,"0", 1);
 	}
 	

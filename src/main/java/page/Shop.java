@@ -5,9 +5,14 @@ public class Shop {
 	//<---------------------------------登录页面数据----------------------------------->
 
 	
-	public static String baseUrl = "http://192.168.1.79";
-	public static String userName = "root";
+	public static String baseUrl = "https://passport.hualala.com/login?redirectURL=https%3A%2F%2Fvip.shop.hualala.com";
+//	public static String baseUrl = "http://vip.shop.hualala.com/";
+	public static String passUrl = "https://passport.hualala.com/";
+	public static String groupID = "wxdyceshi";
+	public static String userName = "maxsu";
 	public static String passWord = "123456";
+	public static String dynamicCode = "//img[@alt='验证码']";
+	public static String loginBtn = "//div[@class='ctn dn wechat']/div/ul/li/label[.='帐号登录']";
 
 	public static String authorisedPwd = "111";//授权密码
 	
@@ -20,9 +25,11 @@ public class Shop {
 	
 	//<---------------------------------登录页面元素------------------------------------>
 	
-	public static String logIn_User = "//*[@id='un']";
-	public static String logIn_Pwd = "//*[@id='pw']";
-	public static String logIn_Submit = "//a[@id='subbtn']";
+	public static String EgroupID = "//input[@name='groupId']";
+	public static String Eusername = "//input[@name='userId']";
+	public static String Epassword = "//input[@name='password']";
+	public static String Ecode = "//ul[@class='accountForm form']/li/input[@name='dynamicCode']";
+	public static String Esubmit = "//a[@class='AccSubmit submit tc']";
 	
 	
 	//功能菜单---》订单管理

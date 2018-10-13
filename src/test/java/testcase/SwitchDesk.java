@@ -30,7 +30,7 @@ public class SwitchDesk {
 		
 		log.info("《----------------------登录--------------------------》");
 		chrome = new OrderManage(Shop.baseUrl);
-		chrome.logIn(Shop.userName, Shop.passWord);
+//		chrome.logIn(Shop.userName, Shop.passWord);
 		chrome.selectDesks(deskNum,"0", 1);
 	}
 	
