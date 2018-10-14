@@ -12,11 +12,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
@@ -41,20 +37,16 @@ public class ShopChrome {
 	Field[] methods = Shop.class.getFields();
 	
 	public ShopChrome(String baseUrl) {
-//		setProperty();
 		browser();
 		this.open(baseUrl);
 	}
+	public ShopChrome(String baseUrl,List<Cookie> cookie) {
+		browser();
+		this.open(baseUrl,cookie);
+	}
 	public ShopChrome() {
-		System.setProperty("webdriver.chrome.driver", "./libs/chromedriver.exe");
+
 	}
-	/**
-	 * 设置谷歌浏览器的环境属性
-	 */ 	
-	public static void setProperty() {
-		System.setProperty("webdriver.chrome.driver", "./libs/chromedriver.exe");
-	}
-	
 	/**
 	 *  打开指定的Url地址
 	 *  @param url 网址
@@ -66,6 +58,25 @@ public class ShopChrome {
 //			options.setBinary(path);
 //			dr = new ChromeDriver(options);
 			dr.get(url);
+		} catch (Exception e) {
+			log.error("open error"+e);
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 *  打开指定的Url地址
+	 *  @param url 网址
+	 * */
+	public void open(String url, List<Cookie> cookieList) {
+		try {
+			log.info("open url: "+url);
+			dr.get(url);
+            System.out.println(dr.manage().getCookies());
+            for (int i = 0; i < cookieList.size(); i++) {
+                dr.manage().addCookie(cookieList.get(i));
+            }
+            dr.navigate().refresh();
 		} catch (Exception e) {
 			log.error("open error"+e);
 			e.printStackTrace();
