@@ -11,8 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
 
 public class GetCookie {
     public static Logger log =  LogManager.getLogger(GetCookie.class.getName());
@@ -115,6 +114,7 @@ public class GetCookie {
 
     public static void main(String[] args) {
         String orginStr = loginAndGetCookie();
+        System.out.println(orginStr);
 //        String[] strings = orginStr.split(";");
 //        System.out.println(strings[0]);
 //        final String rex = "access_token.*?;";

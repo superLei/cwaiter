@@ -1,137 +1,161 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>pos</groupId>
-	<artifactId>cwaiter</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+    <groupId>pos</groupId>
+    <artifactId>cwaiter</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
-	<name>cwaiter</name>
-	<url>http://maven.apache.org</url>
-	<!--<repositories>-->
-		<!--<repository>-->
-			<!--<id>public</id>-->
-			<!--<name>Public Repositories</name>-->
-			<!--<url>http://192.168.1.40:8081/nexus/content/groups/public/</url>-->
-			<!--<releases>-->
-				<!--<enabled>true</enabled>-->
-			<!--</releases>-->
-			<!--<snapshots>-->
-				<!--<enabled>true</enabled>-->
-			<!--</snapshots>-->
-		<!--</repository>-->
-	<!--</repositories>-->
-	<!---->
-	<!--<pluginRepositories>-->
-	<!--<pluginRepository>-->
-		<!--<id>public</id>-->
-		<!--<name>Public Repositories</name>-->
-		<!--<url>http://192.168.1.40:8081/nexus/content/groups/public/</url>-->
-		<!--<releases>-->
-			<!--<enabled>true</enabled>-->
-		<!--</releases>-->
-		<!--<snapshots>-->
-			<!--<enabled>true</enabled>-->
-		<!--</snapshots>-->
-	<!--</pluginRepository>-->
-<!--</pluginRepositories>  -->
+    <name>cwaiter</name>
+    <url>http://maven.apache.org</url>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
-	<dependencies>
-	<dependency>
-		<groupId>org.seleniumhq.selenium</groupId>
-		<artifactId>selenium-java</artifactId>
-		<version>3.14.0</version>
-	</dependency>
-		<!-- https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
-		<dependency>
-			<groupId>net.sourceforge.tess4j</groupId>
-			<artifactId>tess4j</artifactId>
-			<version>4.2.0</version>
-		</dependency>
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.14.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
+        <!--<dependency>-->
+        <!--<groupId>net.sourceforge.tess4j</groupId>-->
+        <!--<artifactId>tess4j</artifactId>-->
+        <!--<version>4.2.0</version>-->
+        <!--</dependency>-->
+        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+        </dependency>
 
 
-		<dependency>
-		<groupId>org.testng</groupId>
-		<artifactId>testng</artifactId>
-		<version>6.9.10</version>
-	</dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.9.10</version>
+        </dependency>
 
-	<!-- Log4j API -->
-	<dependency>
-		<groupId>org.apache.logging.log4j</groupId>
-		<artifactId>log4j-api</artifactId>
-		<version>2.7</version>
-	</dependency>
-	<!-- Core Log4j -->
-	<dependency>
-		<groupId>org.apache.logging.log4j</groupId>
-		<artifactId>log4j-core</artifactId>
-		<version>2.7</version>
-	</dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+        </dependency>
 
-</dependencies>
+        <!-- Log4j API -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.7</version>
+        </dependency>
+        <!-- Core Log4j -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.7</version>
+        </dependency>
 
-	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<artifactId>maven-surefire-plugin</artifactId>
-					<version>2.9</version>
-					<configuration>
-						<suiteXmlFiles>
-							<suiteXmlFile>testng.xml</suiteXmlFile>
-						</suiteXmlFiles>
-					</configuration>
-					<executions>
-						<execution>
-							<id>default-test</id>
-							<phase>test</phase>
-							<goals>
-								<goal>test</goal>
-							</goals>
-						</execution>
-					</executions>
-				</plugin>
-				<plugin>
-					<artifactId>maven-resources-plugin</artifactId>
-					<version>2.6</version>
-					<executions>
-						<execution>
-							<id>copy-xmls</id>
-							<phase>process-sources</phase>
-							<goals>
-								<goal>copy-resources</goal>
-							</goals>
-							<configuration>
-								<outputDirectory>${basedir}/target/classes</outputDirectory>
-								<resources>
-									<resource>
-										<directory>${basedir}/src/main/java</directory>
-										<includes>
-											<include>**/*.xml</include>
-										</includes>
-									</resource>
-								</resources>
-							</configuration>
-						</execution>
-					</executions>
-				</plugin>
-			</plugins>
-		</pluginManagement>
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <defaultGoal>install</defaultGoal>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.5.1</version>
                 <configuration>
-                    <source>7</source>
-                    <target>7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>assemble-all</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
+
+    <!--<build>-->
+    <!--<pluginManagement>-->
+    <!--<plugins>-->
+    <!--<plugin>-->
+    <!--<artifactId>maven-surefire-plugin</artifactId>-->
+    <!--<version>2.9</version>-->
+    <!--<configuration>-->
+    <!--<suiteXmlFiles>-->
+    <!--<suiteXmlFile>testng.xml</suiteXmlFile>-->
+    <!--</suiteXmlFiles>-->
+    <!--</configuration>-->
+    <!--<executions>-->
+    <!--<execution>-->
+    <!--<id>default-test</id>-->
+    <!--<phase>test</phase>-->
+    <!--<goals>-->
+    <!--<goal>test</goal>-->
+    <!--</goals>-->
+    <!--</execution>-->
+    <!--</executions>-->
+    <!--</plugin>-->
+    <!--<plugin>-->
+    <!--<artifactId>maven-resources-plugin</artifactId>-->
+    <!--<version>2.6</version>-->
+    <!--<executions>-->
+    <!--<execution>-->
+    <!--<id>copy-xmls</id>-->
+    <!--<phase>process-sources</phase>-->
+    <!--<goals>-->
+    <!--<goal>copy-resources</goal>-->
+    <!--</goals>-->
+    <!--<configuration>-->
+    <!--<outputDirectory>${basedir}/target/classes</outputDirectory>-->
+    <!--<resources>-->
+    <!--<resource>-->
+    <!--<directory>${basedir}/src/main/java</directory>-->
+    <!--<includes>-->
+    <!--<include>**/*.xml</include>-->
+    <!--</includes>-->
+    <!--</resource>-->
+    <!--</resources>-->
+    <!--</configuration>-->
+    <!--</execution>-->
+    <!--</executions>-->
+    <!--</plugin>-->
+    <!--</plugins>-->
+    <!--</pluginManagement>-->
+    <!--<plugins>-->
+    <!--<plugin>-->
+    <!--<groupId>org.apache.maven.plugins</groupId>-->
+    <!--<artifactId>maven-compiler-plugin</artifactId>-->
+    <!--<configuration>-->
+    <!--<source>7</source>-->
+    <!--<target>7</target>-->
+    <!--</configuration>-->
+    <!--</plugin>-->
+    <!--</plugins>-->
+    <!--</build>-->
 </project>
